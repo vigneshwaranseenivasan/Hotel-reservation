@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<body>
+     <style>
+         /* div{
+            box-sizing: border-box;
+            width:100%;
+            justify-content: center;
+            float:left;
+            align-content: center;
+            align-items: center;
+        }  */
+        form{
+           margin:0 auto;
+           text-align: center;
+           align-items: center;
+           width: 600px;
+           
+            
+        } 
+        td{
+            padding: 5px;
+      }
+        body{
+            background:linear-gradient(to right,green,yellow);
+            background-image:url(./1321265.webp);
+        }
+    </style>
+ <script>  
+function validateform(){   
+var name=document.myform.name.value;  
+var phonenumber=document.myform.phonenumber.value;
+var gender=document.myform.gender.value;
+var address=document.myform.address.value; 
+var Date=document.myform.Date.value; 
+
+  
+if (name==null || name==""){  
+  alert("Please Enter a Name");  
+  return false;
+
+}else if(phonenumber.length<10){  
+  alert("Enter a valid phone number.");  
+  return false;  
+  } 
+  if (gender==null || gender=="") {
+                alert("Gender is required");
+                
+                return false;
+            } 
+   if (address==null || address==""){
+    alert("please enter your address");
+    return false;
+   }
+   if (Date==null || Date==""){
+    alert("please choose your Arrival Date");
+    return false;
+   }
+
+}  
+</script>
+<body>  
+    
+    <div>
+    <center><h1>HOTEL ROOM BOOKING PAGE</h1></center>
+<form name="myform" method="post" action="hotel.html" onsubmit="return validateform()">
+    <table>  
+<tr>
+    
+    <td><label>Name:</label></td>
+        <td> <input type="text" name="name"></td>
+        
+</tr>
+<tr>
+<td><label>phonenumber:</label></td>
+<td><input type="phonenumber" name="phonenumber"></td>
+</tr>
+<tr>  
+<td><label>gender:</label></td>
+<td><input type="radio" name="gender" value="male">Male
+<input type="radio" name="gender" value="female">female</td>
+</tr>
+<tr>
+    <td>
+<label>address:</label></td>
+<td><input type="text" name="address"></td>
+</tr>
+<tr>
+<td><label>Date:</label></td>
+<td><input type="Date" id="Date" name="Date"></td>
+</tr>
+<tr>
+ <td>   
+<input type="Submit" value="Submit">
+<input type="Reset"  value="Reset">
+</td> 
+</tr>
+    </table>
+    
+</form>
+    
+    </div> 
+</body>
+</html>
